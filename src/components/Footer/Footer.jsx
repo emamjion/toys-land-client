@@ -6,13 +6,13 @@ const Footer = () => {
     return (
         <div className='mt-12 grid grid-cols-1 md:grid-cols-4 gap-6 bg-[#537188] p-12'>
             <div>
-                <Link>
+                <Link to='/'>
                     <img className='w-20 h-20' src={logo} />
+                </Link>
                     <h2 className='text-2xl my-2 font-bold text-[#f3f3f3]'>Toys Land</h2>
                     <p className=''>
                         Toys Land is a Toys collection <br /> website where toy car can be seen.
                     </p>
-                </Link>
             </div>
             <div className='flex flex-col'>
                 <h1 className='text-[#f3f3f3] font-semibold text-2xl mb-2'>Navbar</h1>
