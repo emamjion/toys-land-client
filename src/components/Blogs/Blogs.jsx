@@ -28,7 +28,7 @@ const Blogs = () => {
             <div className='bg-purple-100 rounded-lg p-6'>
                 <h1 className='text-2xl font-medium mb-3'>What is MongoDB aggregate and how does it work (google it)?</h1>
                 <p>
-                    When a user login in, the authorization server issues an access token which is an a remains that client applications can use to make secure calls to an API server. When a client application needs to access protected resources on a server from the user. The access token lets the client signal to the server that it has recieved authorization by the user to perform convinced tasks or access convinced resources.
+                    MongoDB aggregates makes it easier to query data from any collectio. It involves things like matching, getting data from other collections, selecting fields and much more.
                 </p>
             </div>
         </div>
