@@ -9,7 +9,7 @@ ul a.active{
 }
 
 .background-img{
-    background-image: url(../src/assets/images/Error-pic/four-o-four.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url(../src/assets/images/Error-pic/error-img.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

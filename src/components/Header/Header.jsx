@@ -28,7 +28,9 @@ const Header = () => {
             </ul>
             <div className='flex items-center justify-center'>
                 <h2>Profile</h2>
-                <button className='px-6 py-2 bg-[#f39c12] ml-4 text-white font-semibold rounded'>Login</button>
+                <Link to='/login'>
+                    <button className='px-6 py-2 bg-[#f39c12] ml-4 text-white font-semibold rounded'>Login</button>
+                </Link>
             </div>
         </div>
     );
