@@ -9,7 +9,8 @@ import car7 from '../../../assets/images/car_gallery/car7.png';
 const CarGallery = () => {
     return (
         <div>
-            <h1 className='text-center font-medium text-2xl mb-4'>Car Gallery</h1>
+            <h4 className='mx-auto text-center p-2 rounded font-semibold text-[#f39c12] bg-slate-600 w-[100px]'>Gallery</h4>
+            <h1 className='text-center font-medium text-2xl mb-4 mt-3'>Car Gallery</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 <img className='rounded-lg border-4 w-[100%] h-[100%]' src={car1} />
                 <img className='rounded-lg border-4 w-[100%] h-[100%]' src={car2} />
