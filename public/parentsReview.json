@@ -1,0 +1,34 @@
+[
+    {
+        "id" : "1",
+        "name" : "John Wasim",
+        "img" : "https://i.ibb.co/nQzcSJx/pexels-linkedin-sales-navigator-2182970.png",
+        "rating" : "4",
+        "review" : "I recently purchased the toy car for my son's birthday, and he absolutely loves it! The car is well-built and durable, perfect for rough play. The remote control is easy to use, even for a young child."
+    },
+    
+    {
+        "id" : "2",
+        "name" : "Elma Elahi",
+        "img" : "https://i.ibb.co/sbgbWrx/pexels-vinicius-wiesehofer-1130626.png",
+        "rating" : "5",
+        "review" : "I bought this toy car for my toddler, and it has become his favorite toy! The car has a cute design with vibrant colors that instantly caught his attention."
+    },
+    
+    {
+        "id" : "3",
+        "name" : "Elon Hakim",
+        "img" : "https://i.ibb.co/M5q58xf/pexels-italo-melo-2379004.png",
+        "rating" : "5",
+        "review" : "I recently purchased the toy car for my son's birthday, and he absolutely loves it! The car is well-built and durable, perfect for rough play. The remote control is easy to use, even for a young child."
+    },
+    
+    {
+        "id" : "4",
+        "name" : "Kulam Komol",
+        "img" : "https://i.ibb.co/Pz03yL6/pexels-chloe-1043471.png",
+        "rating" : "4",
+        "review" : "I recently purchased the toy car for my son's birthday, and he absolutely loves it! The car is well-built and durable, perfect for rough play. The remote control is easy to use, even for a young child."
+    }
+    
+]

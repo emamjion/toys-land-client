@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import CarGallery from '../CarGallery/CarGallery';
 import About from '../About/About';
 import OurUser from '../Our_user/OurUser';
+import ParentsReview from '../ParentsReview/ParentsReview';
 
 const Home = () => {
     return (
@@ -25,6 +26,11 @@ const Home = () => {
             {/* user section */}
             <section className='my-24'>
                 <OurUser/>
+            </section>
+
+            {/* Parents Review */}
+            <section className='my-24'>
+                <ParentsReview/>
             </section>
         </div>
     );
