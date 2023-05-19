@@ -1,4 +1,7 @@
 import React from 'react';
+import user1 from '../../../assets/images/user/user-1.png';
+import user2 from '../../../assets/images/user/user-2.png';
+import user3 from '../../../assets/images/user/user-3.png';
 
 const OurUser = () => {
     return (
@@ -10,9 +13,21 @@ const OurUser = () => {
                 Children are the primary users of toys. Toys play a crucial role in their development and provide        opportunities for imaginative play, <br /> social interaction, and learning. Toys designed for children often focus on age-appropriate features, such as vibrant colors, <br /> interactive elements, and educational aspects.
             </p>
             </div>
-            <div>
-                <div>
-                    <img src="" alt="" />
+            <div className='flex items-center justify-center mt-6 gap-6'>
+                <div className='h-96'>
+                    <img className='border-4 rounded-lg' src={user1} />
+                    <h2 className='text-center mt-2 text-lg font-semibold'>Jovan Halim</h2>
+                    <p className='text-center'>New York</p>
+                </div>
+                <div className='h-96'>
+                    <img className='border-4 rounded-lg' src={user2} />
+                    <h2 className='text-center mt-2 text-lg font-semibold'>Rahima Khan</h2>
+                    <p className='text-center'>California</p>
+                </div>
+                <div className='h-96'>
+                    <img className='border-4 rounded-lg' src={user3} />
+                    <h2 className='text-center mt-2 text-lg font-semibold'>Komol Alom</h2>
+                    <p className='text-center'>Newziland</p>
                 </div>
             </div>
         </div>
