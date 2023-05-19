@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/images/logo/toys-land-logo.png'
 import { Link } from 'react-router-dom';
+import { FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -23,17 +24,25 @@ const Footer = () => {
                 <Link className='font-medium underline'>Blogs</Link>
             </div>
             <div className='flex flex-col'>
-                <h1 className='text-[#f3f3f3] font-semibold text-2xl mb-2'>Notice</h1>
-                <Link className='font-medium underline'>Terms of Use</Link>
-                <Link className='font-medium underline'>Privacy policy</Link>
-                <Link className='font-medium underline'>Cookie policy</Link>
+                <h1 className='text-[#f3f3f3] font-semibold text-2xl mb-2'>Social Media</h1>
+                <div className='flex'>
+                    <Link className='mr-5'>
+                        <span className='text-2xl text-white'> < FaFacebookSquare /> </span>
+                    </Link>
+                    <Link className='mr-5'>
+                        <span className='text-2xl text-white'> < FaTwitterSquare /> </span>
+                    </Link>
+                    <Link className='mr-5'>
+                        <span className='text-2xl text-white'> < FaInstagramSquare /> </span>
+                    </Link>
+                </div>
             </div>
             <div className='flex flex-col'>
-                <h1 className='text-[#f3f3f3] font-semibold text-2xl mb-2'>Subscribe</h1>
-                <span className='mb-1'>Enter your Email Address</span>
+                <h1  className='text-[#f3f3f3] font-semibold text-2xl mb-2'> Contact Us</h1>
                 <div>
-                    <input className='p-2 rounded' type='email' placeholder='username@site.com' />
-                    <button className='px-2 absolute left-3/4 py-2 bg-[#f39c12] ml-4 text-white font-semibold rounded'>Subscribe</button>
+                    <p>Ap 867-859 Sit Rd. </p>
+                    <p>Azusa New York 39531 </p>
+                    <p>(793) 151-6230</p>
                 </div>
             </div>
         </div>
