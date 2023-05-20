@@ -1,16 +1,40 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
     const [success, setSuccess] = useState('');
     const [error, setError] = useState('');
+
+    const { logIn, googleLogin } = useContext(AuthContext);
     
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+
+        logIn(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            setSuccess('User has been Login!!');
+            setError('');
+            form.reset();
+        })
+        .catch(error => {
+            setError(error.message);
+            setSuccess('');
+        })
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then(() => {})
+        .catch(error => {
+            console.error(error.message);
+        })
     }
     
     return (
@@ -33,7 +57,7 @@ const Login = () => {
                 </div>
                 <div className='text-lg font-bold'>or</div>
                 <div className='flex items-center justify-center mt-4 pb-8'>
-                    <button className='flex items-center border-2 border-[#f39c12] p-4 rounded-lg cursor-pointer'>
+                    <button onClick={handleGoogleLogin} className='flex items-center border-2 border-[#f39c12] p-4 rounded-lg cursor-pointer'>
                         <span  className='mr-2'>< FaGoogle /></span> <span className='inline font-medium'>Login with Google</span>
                     </button>
                 </div>
