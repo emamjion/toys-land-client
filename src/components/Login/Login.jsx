@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
+    const [success, setSuccess] = useState('');
+    const [error, setError] = useState('');
+    
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+    }
+    
     return (
         <div className='my-24 bg-orange-200 text-center p-24'>
-            <form className='shadow-xl bg-[#fff] w-[600px] mx-auto rounded-lg'>
+            <form onSubmit={handleLogin} className='shadow-xl bg-[#fff] w-[600px] mx-auto rounded-lg'>
                 <h2 className='text-2xl font-medium py-6'>Login</h2>
                 <div className='my-2'>
                     <input className='border border-[#757575] w-3/4 py-2 px-3 rounded' type="email" name="email" placeholder='Your Email' />
@@ -26,6 +36,10 @@ const Login = () => {
                     <button className='flex items-center border-2 border-[#f39c12] p-4 rounded-lg cursor-pointer'>
                         <span  className='mr-2'>< FaGoogle /></span> <span className='inline font-medium'>Login with Google</span>
                     </button>
+                </div>
+                <div className='mt-3 pb-6 text-center'>
+                    <p className='text-green-500 font-medium'>{success}</p>
+                    <p className='text-red-500 font-medium'>{error}</p>
                 </div>
             </form>
         </div>

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../assets/images/logo/toys-land-logo.png';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Header = () => {
+    const {user} = useContext(AuthContext);
+    
     return (
         <div className='flex items-center justify-between mt-6'>
             <Link className='flex items-center justify-center gap-4' to='/'>
