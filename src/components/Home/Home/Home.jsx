@@ -4,6 +4,7 @@ import CarGallery from '../CarGallery/CarGallery';
 import About from '../About/About';
 import OurUser from '../Our_user/OurUser';
 import ParentsReview from '../ParentsReview/ParentsReview';
+import ShopByCategory from '../ShopByCategory/ShopByCategory';
 
 const Home = () => {
     return (
@@ -26,6 +27,11 @@ const Home = () => {
             {/* user section */}
             <section className='my-24'>
                 <OurUser/>
+            </section>
+
+            {/* Shop by Category */}
+            <section className='my-24'>
+                <ShopByCategory/>
             </section>
 
             {/* Parents Review */}
