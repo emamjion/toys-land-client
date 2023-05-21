@@ -1,6 +1,22 @@
 import React from 'react';
+// import Swal from 'sweetalert2'
 
 const MyToysRow = ({myToy}) => {
+    const {_id, sellerName, category, price, quantity} = myToy;
+
+    const handleDelete = (id) => {
+        const procced = confirm('Are you sure?');
+        if(procced){
+            fetch(`https://toys-land-server.vercel.app/addToy/${id}`,{
+                method : 'DELETE',
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+        }
+    }
+    
     return (
             <tr>
               <th>
@@ -10,30 +26,21 @@ const MyToysRow = ({myToy}) => {
               </th>
               <td>
                 <div className="flex items-center space-x-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="/tailwind-css-component-profile-2@56w.png"
-                        alt="Avatar Tailwind CSS Component"
-                      />
-                    </div>
-                  </div>
                   <div>
-                    <div className="font-bold">Hart Hagerty</div>
-                    <div className="text-sm opacity-50">United States</div>
+                    <div className="font-bold">{sellerName}</div>
                   </div>
                 </div>
               </td>
               <td>
-                Zemlak, Daniel and Leannon
-                <br />
-                <span className="badge badge-ghost badge-sm">
-                  Desktop Support Technician
-                </span>
+                {category}
               </td>
-              <td>Purple</td>
+              <td>{quantity}</td>
+              <td>{price}</td>
               <th>
-                <button className="btn btn-ghost btn-xs">details</button>
+                <button className="btn btn-ghost btn-xs">Update</button>
+              </th>
+              <th>
+                <button onClick={() => handleDelete(_id)} className="btn">Delete</button>
               </th>
             </tr>
     );

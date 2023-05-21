@@ -4,7 +4,6 @@ import MyToysRow from "./MyToysRow";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
-  console.log(user.email);
   const [myToys, setMyToys] = useState([]);
 
   const url = `https://toys-land-server.vercel.app/addToy?email=${user?.email}`;
@@ -28,9 +27,11 @@ const MyToys = () => {
                 </label>
               </th>
               <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
-              <th></th>
+              <th>Sub Category</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Update</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
