@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const AddToy = () => {
+    const { user } = useContext(AuthContext);
+    // console.log(user)
+    
     const handleAddToy = (event) => {
         event.preventDefault();
         const form = event.target;
         const toyName = form.name.value;
         const photoUrl = form.photo.value;
         const sellerName = form.sellername.value;
-        const sellerEmail = form.selleremail.value;
+        const email = user?.email;
         const category = form.category.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
-        // console.log(toyName, photoUrl, sellerName, sellerEmail, category, price, rating, quantity);
 
-        const newToy = { toyName, photoUrl, sellerName, sellerEmail, category, price, rating, quantity };
+        const newToy = { 
+            toyName, photoUrl, sellerName, email, category, price, rating, quantity 
+            };
         console.log(newToy);
 
         // send toy data
@@ -62,11 +67,11 @@ const AddToy = () => {
                     </div>
                     <div>
                         <span  className='font-medium mb-2'>Seller Name</span>
-                        <input className='w-full px-4 py-2 rounded' type="text" name="sellername" placeholder='Seller Name' />
+                        <input className='w-full px-4 py-2 rounded' defaultValue={user?.name} type="text" name="sellername" placeholder='Seller Name' />
                     </div>
                     <div>
                         <span  className='font-medium mb-2'>Seller Email</span>
-                        <input className='w-full px-4 py-2 rounded' type="email" name="selleremail" placeholder='Seller Email' />
+                        <input className='w-full px-4 py-2 rounded' defaultValue={user?.email} type="email" name="email" placeholder='Seller Email' />
                     </div>
                     <div>
                         <span  className='font-medium mb-2'>Sub Category</span>
