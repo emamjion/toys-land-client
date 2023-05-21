@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Category from './Category';
 
 const ShopByCategory = () => {
     const [activeTab, setActiveTab] = useState('sportscar');
-    
+    const [categories, setCategories] = useState([]);
+    useEffect(() => {
+        fetch(`http://localhost:5000/categories/${activeTab}`)
+        .then(res => res.json())
+        .then(data => setCategories(data))
+    }, [activeTab])
+
     const handleToyes = (tabName) => {
         setActiveTab(tabName);
     }
@@ -12,7 +19,7 @@ const ShopByCategory = () => {
             <h3 className='mx-auto text-center p-2 rounded font-semibold text-[#f39c12] bg-slate-600 w-[100px]'>Category</h3>
             <h1 className='text-3xl font-semibold mt-4 mb-3 text-center'>Shop By Category</h1>
 
-            <div className='flex items-center justify-center mt-6'>
+            <div className='flex items-center justify-center mt-6 mb-12'>
                 <div className="tabs">
                     <a 
                         onClick={() => handleToyes('sportscar')} 
@@ -33,6 +40,14 @@ const ShopByCategory = () => {
                         Regular Car
                     </a>
                 </div>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-6'>
+                {
+                    categories.map(category => <Category
+                        key={category._id}
+                        category={category}
+                    />)
+                }
             </div>
         </div>
     );

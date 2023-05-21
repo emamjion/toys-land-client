@@ -1,0 +1,68 @@
+[
+    {
+        "name" : "Black Red Car",
+        "img" : "https://i.ibb.co/3TKffCW/sports-car1.png",
+        "rating" : "4.5",
+        "price" : "225",
+        "status" : "sportscar"
+    },
+    
+    {
+        "name" : "White Racing car",
+        "img" : "https://i.ibb.co/3k859p0/sports-car2.png",
+        "rating" : "5",
+        "price" : "208",
+        "status" : "sportscar"
+    },
+    
+    {
+        "name" : "Red Sports Car",
+        "img" : "https://i.ibb.co/8XScpxg/sports-car3.png",
+        "rating" : "5",
+        "price" : "195",
+        "status" : "sportscar"
+    },
+    
+    {
+        "name" : "Orange Truck",
+        "img" : "https://i.ibb.co/QNbmX2d/truck-1.png",
+        "rating" : "4.5",
+        "price" : "365",
+        "status" : "truck"
+    },
+    {
+        "name" : "Dram Truck",
+        "img" : "https://i.ibb.co/0ySXkRX/truck-2.png",
+        "rating" : "5",
+        "price" : "295",
+        "status" : "truck"
+    },
+    {
+        "name" : "Havvy Truck",
+        "img" : "https://i.ibb.co/tQSZvFj/truck-3.png",
+        "rating" : "4",
+        "price" : "550",
+        "status" : "truck"
+    },
+    {
+        "name" : "Red Cuty car",
+        "img" : "https://i.ibb.co/nw3Tc6t/regular-car1.png",
+        "rating" : "5",
+        "price" : "256",
+        "status" : "regularcar"
+    },
+    {
+        "name" : "Orange Black shade Car",
+        "img" : "https://i.ibb.co/XYj7bmz/regular-car2.png",
+        "rating" : "4",
+        "price" : "188",
+        "status" : "regularcar"
+    },
+    {
+        "name" : "Blue Car",
+        "img" : "https://i.ibb.co/qRdfp3r/regular-car3.png",
+        "rating" : "5",
+        "review" : "198",
+        "status" : "regularcar"
+    }
+]
