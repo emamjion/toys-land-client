@@ -29,7 +29,7 @@ const Header = () => {
                     <NavLink to='/my-toys'>My Toys</NavLink>
                 </li>
                 <li className='mr-7 text-[#2c3e50] font-semibold'>
-                    <NavLink to='/add-toy'>Added A Toy</NavLink>
+                    <NavLink to='/add-toy'>Add A Toy</NavLink>
                 </li>
                 <li className='mr-7 text-[#2c3e50] font-semibold'>
                     <NavLink to='/blogs'>Blogs</NavLink>

@@ -62,7 +62,7 @@
         "name" : "Blue Car",
         "img" : "https://i.ibb.co/qRdfp3r/regular-car3.png",
         "rating" : "5",
-        "review" : "198",
+        "price" : "198",
         "status" : "regularcar"
     }
 ]
